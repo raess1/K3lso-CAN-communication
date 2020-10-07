@@ -22,7 +22,22 @@ Check: Is the CAN device initialized?
 lsmod | grep ^peak
 ```
 
+How to install PCAN-View via repository
 
+Download and install the following file peak-system.list from the PEAK-System website:
+``` bash
+wget -q http://www.peak-system.com/debian/dists/`lsb_release -cs`/peak-system.list -O- | sudo tee /etc/apt/sources.list.d/peak-system.list
+```
+Then, download and install the PEAK-System public key for apt-secure, so that the repository is trusted:
+``` bash
+wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add -
+```
+
+To install pcanview-ncurses next, do:
+``` bash
+sudo apt-get update
+sudo apt-get install pcanview-ncurses
+```
 
 
 
