@@ -13,11 +13,9 @@ PCAN-M.2 CAN and CAN FD Interface for M.2 (PCIe)  https://www.peak-system.com/PC
 Check: Are CAN drivers part of your Linux environment?
 ``` bash
 grep PEAK_ /boot/config-`uname -r`
-
+...
 
 Check: Is the CAN device initialized?
 ``` bash
 lsmod | grep ^peak
 ```
-
-...
