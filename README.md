@@ -54,5 +54,11 @@ make -C test && sudo make -C test install # test utilities (optional)
 sudo modprobe pcan # driver loading
 ```
 
+Launch PCAN-View for testing CAN communication:
+``` bash
+pcanview
+```
+
+
 
 
