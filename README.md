@@ -33,10 +33,11 @@ Then, download and install the PEAK-System public key for apt-secure, so that th
 wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add -
 ```
 
-To install pcanview-ncurses next, do:
+Install pcanview-ncurses and other dependencies:
 ``` bash
 sudo apt-get update
 sudo apt-get install pcanview-ncurses
+sudo apt-get install libpopt-dev
 ```
 
 
