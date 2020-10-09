@@ -1,0 +1,23 @@
+===============================================================================
+PCANBasic_enu_linux_addenda.txt
+
+PCAN-Basic Linux V4.2.1.1
+Copyright (c) 2018 PEAK-System Technik GmbH Darmstadt, Germany
+All rights reserved.
+===============================================================================
+
+Some features listed in the PCANBasic documentation (Windows version) are not available within Linux PCANBasic API. 
+
+- Timestamps on Linux are the number of milliseconds that have elapsed since the epoch: the epoch is the point in time of 00:00 UTC, 1 January 1970.
+
+- The following parameters will return PCAN_ERROR_ILLPARAMTYPE (0x4000, 16384) with the CAN_GetValue/CAN_SetValue functions: 
+	* PCAN_5VOLTS_POWER
+	* PCAN_CHANNEL_IDENTIFYING
+	* PCAN_IP_ADDRESS
+	* PCAN_LAN_SERVICE_STATUS
+
+- The following parameters has a slightly different behaviour/usage than the one described in the Windows documentation:
+	* PCAN_CHANNEL_VERSION: CAN_GetValue requires an initialized channel. Otherwise PCAN_ERROR_INITIALIZE is returned.
+	* PCAN_RECEIVE_EVENT: CAN_SetValue will return PCAN_ERROR_ILLOPERATION as the feature is enabled by default.
+	* PCAN_BUSSPEED_NOMINAL: required buffer size is 64 bits long.
+	* PCAN_BUSSPEED_DATA: required buffer size is 64 bits long.
