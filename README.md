@@ -20,6 +20,9 @@ grep PEAK_ /boot/config-`uname -r`
 Check: Is the CAN device initialized?
 ``` bash
 lsmod | grep ^peak
+
+ls -l /dev/pcan*
+
 ```
 
 How to install PCAN-View via repository
