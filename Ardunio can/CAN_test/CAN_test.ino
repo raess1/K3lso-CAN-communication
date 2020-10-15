@@ -86,7 +86,7 @@ long previousMillis = 0;
 const long interval = 20;  // 20 ms = 50 Hz period
 
 void loop() {
-    unsigned long currentMillies = millis();
+    unsigned long currentMillis = millis();
 
     if (currentMillis - previousMillis >= interval) {
       float p_step = 0.01;
