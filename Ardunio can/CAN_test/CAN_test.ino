@@ -54,7 +54,7 @@ void setup() {
     SERIAL.begin(115200);
     delay(1000);
 
-    while (CAN_OK != CAN.begin(CAN_1000KBPS)) {            // init can bus : baudrate = 1000k
+    while (CAN_OK != CAN.begin(CAN_500KBPS)) {            // init can bus : baudrate = 500k
         SERIAL.println("CAN BUS Shield init fail");
         SERIAL.println(" Init CAN BUS Shield again");
         delay(100);
@@ -83,47 +83,54 @@ void setup() {
 }
 
 long previousMillis = 0;
+const long interfaval = 20;  // 20 ms = 50 Hz period
+
 void loop() {
-    float p_step = 0.01;
-    if(digitalRead(UP)==LOW){
-      p_in = p_in + p_step;
-    }
+    unsigned long currentMillies = millis();
+
+    if (currentMillis - previousMillis >= interval) {
+      float p_step = 0.01;
+      if(digitalRead(UP)==LOW){
+        p_in = p_in + p_step;
+      }
+      
+      if(digitalRead(DOWN)==LOW){
+        p_in = p_in - p_step;
+      }
+      p_in = constrain(p_in, P_MIN, P_MAX);
+  
+      if(digitalRead(RIGHT) == LOW){
+        enter_motor();
+        digitalWrite(LED2, HIGH);
+      }
+  
+      if(digitalRead(LEFT) == LOW){
+        exit_motor();
+        digitalWrite(LED2, LOW);
+      }
+  
+       if(digitalRead(CLICK) == LOW){   
+        init_position();
+      }
+  
+      pack_cmd();
+  
+      if(CAN_MSGAVAIL == CAN.checkReceive()){
+        unpack_reply();
+      }
+      
+      SERIAL.print(currentMillies - previousMillis);
+      SERIAL.print(" ");
+      SERIAL.print(p_in);
+      SERIAL.print(" ");
+      SERIAL.print(p_out);
+      SERIAL.print(" ");
+      SERIAL.print(v_out);
+      SERIAL.print(" ");
+      SERIAL.println(t_out);
     
-    if(digitalRead(DOWN)==LOW){
-      p_in = p_in - p_step;
+      previousMillis = currentMillies;
     }
-    p_in = constrain(p_in, P_MIN, P_MAX);
-
-    if(digitalRead(RIGHT) == LOW){
-      enter_motor();
-      digitalWrite(LED2, HIGH);
-    }
-
-    if(digitalRead(LEFT) == LOW){
-      exit_motor();
-      digitalWrite(LED2, LOW);
-    }
-
-     if(digitalRead(CLICK) == LOW){   
-      init_position();
-    }
-
-    pack_cmd();
-
-    if(CAN_MSGAVAIL == CAN.checkReceive()){
-      unpack_reply();
-    }
-    
-    SERIAL.print(millis() - previousMillis);
-    previousMillis = millis();
-    SERIAL.print(" ");
-    SERIAL.print(p_in);
-    SERIAL.print(" ");
-    SERIAL.print(p_out);
-    SERIAL.print(" ");
-    SERIAL.print(v_out);
-    SERIAL.print(" ");
-    SERIAL.println(t_out);
 }
 
 void enter_motor() {
