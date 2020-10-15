@@ -83,7 +83,7 @@ void setup() {
 }
 
 long previousMillis = 0;
-const long interfaval = 20;  // 20 ms = 50 Hz period
+const long interval = 20;  // 20 ms = 50 Hz period
 
 void loop() {
     unsigned long currentMillies = millis();
