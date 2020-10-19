@@ -37,7 +37,7 @@
 float p_in = 0.0f;
 float v_in = 0.0f;
 float kp_in = 15.0f;
-float kd_in = 2.0f;
+float kd_in = 0.5f;
 float t_in = 0.0f;
 // Mearured values
 float p_out = 0.0f;
@@ -83,6 +83,7 @@ void setup() {
 }
 
 long previousMillis = 0;
+const long interval = 20;  // 20 ms = 50 Hz period
 void loop() {
     float p_step = 0.01;
     if(digitalRead(UP)==LOW){
@@ -136,7 +137,7 @@ void enter_motor() {
   buf[5] = 0xFF;
   buf[6] = 0xFF;
   buf[7] = 0xFC;
-  CAN.sendMsgBuf(0x01, 0, 8, buf);
+  CAN.sendMsgBuf(0x02, 0, 8, buf);
 }
 
 void exit_motor() {
@@ -149,7 +150,7 @@ void exit_motor() {
   buf[5] = 0xFF;
   buf[6] = 0xFF;
   buf[7] = 0xFD;
-  CAN.sendMsgBuf(0x01, 0, 8, buf);
+  CAN.sendMsgBuf(0x02, 0, 8, buf);
 }
 
 void init_position() {
@@ -162,7 +163,7 @@ void init_position() {
   buf[5] = 0xFF;
   buf[6] = 0xFF;
   buf[7] = 0xFE;
-  CAN.sendMsgBuf(0x01, 0, 8, buf);
+  CAN.sendMsgBuf(0x02, 0, 8, buf);
 }
 
 void pack_cmd() {
@@ -187,7 +188,7 @@ void pack_cmd() {
   buf[5] = kd_int >> 4;
   buf[6] = ((kd_int & 0xF) << 4) | (t_int >> 8);
   buf[7] = t_int & 0xFF;
-  CAN.sendMsgBuf(0x01, 0, 8, buf);
+  CAN.sendMsgBuf(0x02, 0, 8, buf);
 }
 
 void unpack_reply(){
