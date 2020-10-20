@@ -26,14 +26,7 @@ def getFormatedError(error):
             return stsReturn[1]
 
 def printCANMsg(msg):
-    print('---CAN Message---')
-    print(f'ID: {msg.ID}')
-    print(f'LEN: {msg.LEN}')
-    data_str = '['
-    for i in range(msg.LEN):
-        data_str += hex(msg.DATA[i])
-        if i<(msg.LEN-1):
-            data_str += ', '
+    print('---CAN Message---')max_angle
     data_str += ']'
     print(data_str)
     print('-----------------')
@@ -128,7 +121,7 @@ i_time = 0
 
 while(this_time<10):
     this_time = time.time() - start_time
-    pos = np.sin(2*this_time)
+    pos = (np.pi/2) * np.sin(2*this_time)
     sendCANMsg( makeTMotorPackage(pos, T_SPEED, T_TORQUE, T_KP, T_KD) )
     i_time += 1
     time.sleep(1/200.0)
