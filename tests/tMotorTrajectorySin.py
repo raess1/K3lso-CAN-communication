@@ -131,7 +131,7 @@ while(this_time<10):
     pos = np.sin(2*this_time)
     sendCANMsg( makeTMotorPackage(pos, T_SPEED, T_TORQUE, T_KP, T_KD) )
     i_time += 1
-    delay(1/200.0)
+    time.sleep(1/200.0)
 
 this_time = time.time() - start_time
 freq = 1/(this_time/i_time)
