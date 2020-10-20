@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import time
 
 from PCANBasic import *
@@ -66,7 +65,7 @@ def openCANPort():
     result = m_objPCANBasic.Initialize(m_PcanHandle,baudrate,hwtype,ioport,interrupt)
     if result!=PCAN_ERROR_OK:
         if result != PCAN_ERROR_CAUTION:
-            print(f'Error!: {getFormatedError(result)}')
+            print(f'Error!: {self.getFormatedError(result)}')
         else:
             print('The bitrate being used is different than the given one')
     return result
@@ -123,36 +122,19 @@ print('Turning ON motor mode')
 enableMotorMode(True)
 time.sleep(1)
 
-######
-plt.axis([0, 100, 0, 10])
-
 start_time = time.time()
 this_time = time.time() - start_time
-
-# x = []
-# y = []
-
-period = 4.0
-max_angle = 3.1416
+i_time = 0
 
 while(this_time<10):
     this_time = time.time() - start_time
-    t = this_time/period - np.floor(this_time/period)
-    if t<0.25:
-        pos = max_angle*t*4.0
-    elif t<0.5:
-        pos = max_angle
-    elif t<0.75:
-        pos = -max_angle*t*4.0 + 3*max_angle
-    else:
-        pos = 0.0
+    pos = np.sin(2*this_time)
     sendCANMsg( makeTMotorPackage(pos, T_SPEED, T_TORQUE, T_KP, T_KD) )
-    # time.sleep(0.01)
-    # x.append(this_time)
-    # y.append(pos)
-    # plt.cla()
-    # plt.plot(x, y)
-    # plt.pause(0.001)
+    i_time += 1
+
+this_time = time.time() - start_time
+freq = 1/(this_time/i_time)
+print(f'Loop Freq = {freq}Hz')
 
 print('Turning OFF motor mode') 
 enableMotorMode(False)
