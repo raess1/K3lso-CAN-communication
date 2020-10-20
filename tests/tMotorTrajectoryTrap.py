@@ -12,10 +12,10 @@ hwtype = PCAN_TYPE_ISA
 ioport = 0x100
 interrupt = 3
 
-T_SPEED = 2.0
-T_TORQUE = 2.0
-T_KP = 80.0
-T_KD = 2.0
+T_SPEED = 0.0
+T_TORQUE =0.0
+T_KP = 10.0
+T_KD = 1.0
 
 MOTOR_ID = 1
 

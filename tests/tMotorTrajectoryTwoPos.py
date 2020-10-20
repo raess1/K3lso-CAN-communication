@@ -12,10 +12,10 @@ hwtype = PCAN_TYPE_ISA
 ioport = 0x100
 interrupt = 3
 
-T_SPEED = 2.0
-T_TORQUE = 2.0
-T_KP = 80.0
-T_KD = 2.0
+T_SPEED = 0.0
+T_TORQUE =0.0
+T_KP = 10.0
+T_KD = 1.0
 
 MOTOR_ID = 1
 
@@ -66,7 +66,7 @@ def openCANPort():
     result = m_objPCANBasic.Initialize(m_PcanHandle,baudrate,hwtype,ioport,interrupt)
     if result!=PCAN_ERROR_OK:
         if result != PCAN_ERROR_CAUTION:
-            print(f'Error!: {getFormatedError(result)}')
+            print(f'Error!: {self.getFormatedError(result)}')
         else:
             print('The bitrate being used is different than the given one')
     return result
@@ -123,36 +123,11 @@ print('Turning ON motor mode')
 enableMotorMode(True)
 time.sleep(1)
 
-######
-plt.axis([0, 100, 0, 10])
-
-start_time = time.time()
-this_time = time.time() - start_time
-
-# x = []
-# y = []
-
-period = 4.0
-max_angle = 3.1416
-
-while(this_time<10):
-    this_time = time.time() - start_time
-    t = this_time/period - np.floor(this_time/period)
-    if t<0.25:
-        pos = max_angle*t*4.0
-    elif t<0.5:
-        pos = max_angle
-    elif t<0.75:
-        pos = -max_angle*t*4.0 + 3*max_angle
-    else:
-        pos = 0.0
-    sendCANMsg( makeTMotorPackage(pos, T_SPEED, T_TORQUE, T_KP, T_KD) )
-    # time.sleep(0.01)
-    # x.append(this_time)
-    # y.append(pos)
-    # plt.cla()
-    # plt.plot(x, y)
-    # plt.pause(0.001)
+for i in range(3):
+    sendCANMsg( makeTMotorPackage(1.0, T_SPEED, T_TORQUE, T_KP, T_KD) )
+    time.sleep(2.0)
+    sendCANMsg( makeTMotorPackage(0.0, T_SPEED, T_TORQUE, T_KP, T_KD) )
+    time.sleep(2.0)
 
 print('Turning OFF motor mode') 
 enableMotorMode(False)
