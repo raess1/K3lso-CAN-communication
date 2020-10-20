@@ -13,7 +13,7 @@ ioport = 0x100
 interrupt = 3
 
 T_SPEED = 0.0
-T_TORQUE =0.0
+T_TORQUE =0.0   
 T_KP = 10.0
 T_KD = 1.0
 
