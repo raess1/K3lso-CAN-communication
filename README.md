@@ -63,6 +63,15 @@ Launch PCAN-View for testing CAN communication:
 pcanview
 ```
 
+uninstall PCAN-M.2 Driver for Linux (Ubuntu 18.04)
+``` bash
+cd ~/src/peak/peak-linux-driver-8.10.2/ 
+make uninstall
+rmmod pcan
+sudo reboot
+```
+
+
 
 
 
