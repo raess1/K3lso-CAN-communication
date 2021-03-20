@@ -71,6 +71,25 @@ rmmod pcan
 sudo reboot
 ```
 
+SocketCan : Adapter such as the PEAK-CAN-FD use a 80MHz clock. The following timings have been observed to work:
+``` bash
+ip link set can0 up type can \
+  tq 12 prop-seg 25 phase-seg1 25 phase-seg2 29 sjw 10 \
+  dtq 12 dprop-seg 6 dphase-seg1 2 dphase-seg2 7 dsjw 12 \
+  restart-ms 1000 fd on
+```
+
+PEAK
+Tseg1 = Prop_Seq + Phase_Seq1 (some CAN controllers have separate fields, we only use a single value here)
+Tseg2 = Phase_Seq2
+
+``` bash
+More info here:
+```
+
+
+
+
 
 export some more properties of the device
 ``` bash
