@@ -117,9 +117,9 @@ lspcan overview of the PC CAN interfaces. The "-i" option displays static proper
 
 
 
-TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
+# TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
 
-# Write CAN FD (non-ISO) frames with extended ID 0x123 and 24 data bytes at a nominal bitrate of 
+## Write CAN FD (non-ISO) frames with extended ID 0x123 and 24 data bytes at a nominal bitrate of 
 1 Mbit/s and data bitrate of 5 Mbit/s, using the 80 MHz clock of the 2nd PCIFD interface and the 
 1st PCI interface of the host: 
 
