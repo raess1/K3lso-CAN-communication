@@ -140,3 +140,8 @@ pcanfdtst rx --fd-non-iso -b 1M -d 5M -c 80M /dev/pcanpcifd1
 ```
 ![2222](https://user-images.githubusercontent.com/6362413/111870445-16234d00-8985-11eb-83e3-049b2d0bed51.PNG)
 
+
+
+
+# notes 
+1. A Channel that is initialized using CAN_InitializeFD must use CAN_ReadFD and CAN_WriteFD for communication. Calling CAN_Read and/or CAN_Write will result in a PCAN_ERROR_ILLOPERATION error. 
