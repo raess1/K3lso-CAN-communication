@@ -118,7 +118,7 @@ lspcan overview of the PC CAN interfaces. The "-i" option displays static proper
 
 
 # TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
-(p36 .2 CAN Driver for Linux v8 User manual)
+`(p36 .2 CAN Driver for Linux v8 User manual)`
 Write CAN FD (non-ISO) frames with extended ID 0x123 and 24 data bytes at a nominal bitrate of 
 1 Mbit/s and data bitrate of 5 Mbit/s, using the 80 MHz clock of the 2nd PCIFD interface and the 
 1st PCI interface. 
@@ -131,7 +131,7 @@ pcanfdtst tx --fd-non-iso -n 10 -ie 0x123 -l 24 -b 1M -d 5M -c 80M /dev/pcanpcif
 
 
 # RX TEST  (connecting to channels together. In this case CAN1 & CAN2)
-(p37 .5 CAN Driver for Linux v8 User manual)
+`(p37 .5 CAN Driver for Linux v8 User manual)`
 Read the same bus, but from the 1st /dev/pcanpcifd1 interface:
 ``` bash
 pcanfdtst rx --fd-non-iso -b 1M -d 5M -c 80M /dev/pcanpcifd1
