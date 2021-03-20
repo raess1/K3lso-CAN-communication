@@ -83,6 +83,21 @@ PEAK
 Tseg1 = Prop_Seq + Phase_Seq1 (some CAN controllers have separate fields, we only use a single value here)
 Tseg2 = Phase_Seq2
 
+
+Timings:
+f_clock_mhz=80
+nom_brp=1
+nom_Tseq1 = 50
+nom_Tseq2 = 29
+nom_sjw=10
+data_brp=1
+data_tseg1=8
+data_tseg2=7
+data_sjw=12
+
+
+
+
 ``` bash
 More info here:
 ```
