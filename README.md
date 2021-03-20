@@ -72,6 +72,13 @@ sudo reboot
 ```
 
 
+export some more properties of the device
+``` bash
+for f in /sys/class/pcan/pcanpcifd1/*; do [ -f $f ] && echo -n "`basename $f` = " && cat $f; done 
+```
 
-
+lspcan overview of the PC CAN interfaces. The "-i" option displays static properties of devices nodes. with –T –t –s –f refreshes the screen every second with a detailed view 
+``` bash
+./lspcan -T -t -i
+```
 
