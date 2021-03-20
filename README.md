@@ -118,11 +118,9 @@ lspcan overview of the PC CAN interfaces. The "-i" option displays static proper
 
 
 # TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
-
-## Write CAN FD (non-ISO) frames with extended ID 0x123 and 24 data bytes at a nominal bitrate of 
-## 1 Mbit/s and data bitrate of 5 Mbit/s, using the 80 MHz clock of the 2nd PCIFD interface and the 
-# 1st PCI interface of the host: 
-
+Write CAN FD (non-ISO) frames with extended ID 0x123 and 24 data bytes at a nominal bitrate of 
+1 Mbit/s and data bitrate of 5 Mbit/s, using the 80 MHz clock of the 2nd PCIFD interface and the 
+1st PCI interface of the host: 
 ``` bash
 pcanfdtst tx --fd-non-iso -n 10 -ie 0x123 -l 24 -b 1M -d 5M -c 80M /dev/pcanpcifd1 
 /dev/pcanpcifd0
@@ -132,8 +130,7 @@ pcanfdtst tx --fd-non-iso -n 10 -ie 0x123 -l 24 -b 1M -d 5M -c 80M /dev/pcanpcif
 
 
 # RX TEST  (connecting to channels together. In this case CAN1 & CAN2)
-
-## Read the same bus, but from the 1st /dev/pcanpcifd1 interface:
+Read the same bus, but from the 1st /dev/pcanpcifd1 interface:
 ``` bash
 pcanfdtst rx --fd-non-iso -b 1M -d 5M -c 80M /dev/pcanpcifd1
 ```
