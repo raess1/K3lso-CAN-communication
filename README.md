@@ -102,11 +102,20 @@ lspcan overview of the PC CAN interfaces. The "-i" option displays static proper
 ```
 
 
+
+
+
+
+
+
+
 ##test Directory  (need make test and make install)
 
 ``` bash
  pcanfdtst –-help
 ```
+
+
 
 TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
 
@@ -118,6 +127,8 @@ TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
 pcanfdtst tx --fd-non-iso -n 10 -ie 0x123 -l 24 -b 1M -d 5M -c 80M /dev/pcanpcifd1 
 /dev/pcanpcifd0
 ```
+
+
 
 
 RX TEST  (connecting to channels together. In this case CAN1 & CAN2)
