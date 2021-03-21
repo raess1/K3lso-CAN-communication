@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/pcan_test.dir/pcan_test.cpp.o  -o pcan_test ../libCAN.a -lpcanfd -lpthread -lrt 

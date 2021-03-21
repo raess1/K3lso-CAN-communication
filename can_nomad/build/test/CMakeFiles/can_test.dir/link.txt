@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/can_test.dir/can_test.cpp.o  -o can_test ../libCAN.a -lpthread -lrt 

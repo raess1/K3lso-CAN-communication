@@ -1,0 +1,9 @@
+/home/robot/camilos_dev/can_nomad/build/CMakeFiles/rebuild_cache.dir
+/home/robot/camilos_dev/can_nomad/build/CMakeFiles/CAN.dir
+/home/robot/camilos_dev/can_nomad/build/CMakeFiles/edit_cache.dir
+/home/robot/camilos_dev/can_nomad/build/test/CMakeFiles/rebuild_cache.dir
+/home/robot/camilos_dev/can_nomad/build/test/CMakeFiles/k3lso_test_rx.dir
+/home/robot/camilos_dev/can_nomad/build/test/CMakeFiles/edit_cache.dir
+/home/robot/camilos_dev/can_nomad/build/test/CMakeFiles/k3lso_test_tx.dir
+/home/robot/camilos_dev/can_nomad/build/test/CMakeFiles/can_test.dir
+/home/robot/camilos_dev/can_nomad/build/test/CMakeFiles/pcan_test.dir

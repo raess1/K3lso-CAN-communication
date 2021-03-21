@@ -1,0 +1,57 @@
+Commant to set stop mode:
+0x01
+0x00
+0x00
+
+Command to set position mode:
+0x01
+0x00
+0x0A
+
+Command to set position 0 degrees:
+01
+00
+0a
+0f
+20
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+1c
+04
+00
+13
+0d
+
+Command to set position 90 degrees:
+01
+00
+0a
+0f
+20
+00
+00
+80
+3e
+00
+00
+00
+00
+00
+00
+00
+00
+1c
+04
+00
+13
+0d

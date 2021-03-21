@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/CAN/CANDevice.h
+stdint.h
+-
+string
+-
+thread
+-
+
+../include/CAN/PCANDevice.h
+stdint.h
+-
+string
+-
+CAN/CANDevice.h
+-
+
+/home/robot/camilos_dev/can_nomad/test/k3lso_test_tx.cpp
+CAN/PCANDevice.h
+-
+string.h
+-
+iostream
+-
+unistd.h
+-
+math.h
+-
+

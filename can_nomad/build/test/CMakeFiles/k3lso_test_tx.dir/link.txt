@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/k3lso_test_tx.dir/k3lso_test_tx.cpp.o  -o k3lso_test_tx ../libCAN.a -lpcanfd -lpthread -lrt 
