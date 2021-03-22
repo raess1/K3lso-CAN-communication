@@ -154,8 +154,9 @@ ip link set can0 up type can \
   dtq 12 dprop-seg 6 dphase-seg1 2 dphase-seg2 7 dsjw 12 \
   restart-ms 1000 fd on
 ```
-``` bash
+
 PEAK converting timings help
+``` bash
 f_clock_mhz = 80mhz (depending on device)
 brp = 1
 nom_Tseq1 = prop-seg + phase-seg1
