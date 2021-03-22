@@ -141,7 +141,7 @@ pcanfdtst rx --fd-non-iso -b 1M -d 5M -c 80M /dev/pcanpcifd1
 
 
 
-## Pcanview timings and settings for communication with moteus r4.5 controller.
+# Pcanview timings and settings for communication with moteus r4.5 controller.
 GETTING STARTED
 
 Mjbots have confirmed timings that are working with 80 MHz clock systems over SocketCan https://github.com/mjbots/moteus/blob/main/docs/reference.md#80-mhz-clock-systems
