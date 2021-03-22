@@ -165,7 +165,7 @@ First start Pcanview with
 pcanview 
 ```
 
-Select Pcan Channel (for example  -CAN2 /dev/pcan1) and configure it with the following settings:
+Select Pcan Channel (for example  -CAN2 /dev/pcan1) and configure it with the following settings: (assuming you have it installed)
 ``` bash
 Clock Frequency (Hz) = 80000000
 Bitrate (bps) Nominal = 1000000
@@ -175,6 +175,7 @@ Sample point (x100) Data = 5625
 Sync Jump Width Nominal = 10
 Sync Jump Width Data = 12
 ```
+
 
 To send a first test command to verify communication with moteus (Edit Transmit Message)
 ``` bash
@@ -189,8 +190,15 @@ Under the - Message Type select the follwing:
 [x] Extended Frame
 [x] CAN FD
 [x] Bit Rate Swtich
+Press OK
 ```
 
+Under the Tx CAN-ID you can see your created Messages. to send one. simply select one and press (space).
+
+In the Rx CAN-ID. you should now get a respons from moteus under data table with the following:
+``` bash
+41 01 00
+```
 
 
 
