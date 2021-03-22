@@ -221,7 +221,15 @@ Cycle Time: (ms) = 0
 Press OK
 ```
 Send first messange and you should here the motor has applied torque.
-Send second messange and you should here the motor has no more applied torque.
+RX respons: 
+``` bash
+21 00 00 2f 01 29 a3 1a 3d 33 e3 8a 3a 00 00 00 00 23 0d 32 1c 00 50 50
+```
+Send second messange stop applied torque.
+RX respons: 
+``` bash
+0
+```
 
 
 
