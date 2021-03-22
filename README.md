@@ -154,11 +154,24 @@ ip link set can0 up type can \
   dtq 12 dprop-seg 6 dphase-seg1 2 dphase-seg2 7 dsjw 12 \
   restart-ms 1000 fd on
 ```
-
-PEAK
+``` bash
+PEAK timings converting help
 Tseg1 = Prop_Seq + Phase_Seq1 (some CAN controllers have separate fields, we only use a single value here)
 Tseg2 = Phase_Seq2
+```
 
+``` bash
+Timings:
+f_clock_mhz=80
+nom_brp=1
+nom_Tseq1 = 50
+nom_Tseq2 = 29
+nom_sjw=10
+data_brp=1
+data_tseg1=8
+data_tseg2=7
+data_sjw=12
+```
 
 
 First start Pcanview with 
