@@ -156,12 +156,15 @@ ip link set can0 up type can \
 ```
 ``` bash
 PEAK converting timings help
+f_clock_mhz = 80mhz (depending on device)
+brp = 1
 nom_Tseq1 = prop-seg + phase-seg1
 nom_Tseq2 = phase-seg2
 data_tseg1 = dprop-seg + dphase-seg1
 data_tseg2 = dphase-seg2
-
-
+nom_sjw = sjw
+data_sjw  = dsjw
+data_sjw = 1
 ```
 
 ``` bash
