@@ -200,6 +200,11 @@ Len = 19
 Data: (hex) = 01 00 0a 0e 20 00 00 00 00 00 00 00 00 11 00 1f 01 13 0d
 Cycle Time: (ms) = 0
 [x] Paused 
+- Message Type select the follwing: 
+[x] Extended Frame
+[x] CAN FD
+[x] Bit Rate Swtich
+Press OK
 ```
 Second messange: turn of torque
 ``` bash
@@ -208,6 +213,11 @@ Len = 3
 Data: (hex) = 01 00 00
 Cycle Time: (ms) = 0
 [x] Paused 
+- Message Type select the follwing: 
+[x] Extended Frame
+[x] CAN FD
+[x] Bit Rate Swtich
+Press OK
 ```
 Send first messange and you should here the motor has applied torque.
 Send second messange and you should here the motor has no more applied torque.
