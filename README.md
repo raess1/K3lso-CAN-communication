@@ -155,15 +155,19 @@ ip link set can0 up type can \
   restart-ms 1000 fd on
 ```
 ``` bash
-PEAK timings converting help
-Tseg1 = Prop_Seq + Phase_Seq1 (some CAN controllers have separate fields, we only use a single value here)
-Tseg2 = Phase_Seq2
+PEAK converting timings help
+nom_Tseq1 = prop-seg + phase-seg1
+nom_Tseq2 = phase-seg2
+data_tseg1 = dprop-seg + dphase-seg1
+data_tseg2 = dphase-seg2
+
+
 ```
 
 ``` bash
 Timings:
 f_clock_mhz=80
-nom_brp=1
+brp=1
 nom_Tseq1 = 50
 nom_Tseq2 = 29
 nom_sjw=10
