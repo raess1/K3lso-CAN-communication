@@ -168,6 +168,7 @@ data_sjw  = dsjw
 data_sjw = 1
 ```
 
+With the help from above you will end up with someting like this:
 ``` bash
 Timings:
 f_clock_mhz=80
