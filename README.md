@@ -176,5 +176,18 @@ Sync Jump Width Nominal = 10
 Sync Jump Width Data = 12
 ```
 
+To send a first test command to verify communication with moteus (Edit Transmit Message)
+``` bash
+ID: (hex) = 8001
+Len = 3
+Data: (hex) = 42 01 20
+Cycle Time: (ms) = 0
+[x] Paused 
+```
+
+
+
+
+
 
 
