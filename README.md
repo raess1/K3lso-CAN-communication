@@ -1,14 +1,7 @@
-# K3lso Quadruped
-
-K3lso is a quadruped robot, powered by Jetson NX.  This is BLDC version.
-
-Slack channel: https://join.slack.com/t/newworkspace-7gn1112/shared_invite/zt-hqn0zss3-pZaL3pkLpwtRk7jjMMkjIw
-
-Visit the main repository: https://github.com/raess1/K3lso-Quadruped
-
 # K3lso-CAN-communication
 
 PCAN-M.2 CAN and CAN FD Interface for M.2 (PCIe)  https://www.peak-system.com/PCAN-M-2.473.0.html?&L=1
+PCAN-miniPCIe FD https://www.peak-system.com/PCAN-miniPCIe-FD.464.0.html?&L=1
 
 
 
@@ -78,15 +71,6 @@ ip link set can0 up type can \
   dtq 12 dprop-seg 6 dphase-seg1 2 dphase-seg2 7 dsjw 12 \
   restart-ms 1000 fd on
 ```
-
-
-``` bash
-More info here:
-```
-
-
-
-
 
 export some more properties of the device
 ``` bash
