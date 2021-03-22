@@ -164,14 +164,16 @@ GETTING STARTED
 
 Mjbots have confirmed timings that are working with 80 MHz clock systems over SocketCan https://github.com/mjbots/moteus/blob/main/docs/reference.md#80-mhz-clock-systems
 
-This timings will not work out-of-the running Peak Basic API since they are uses different formats. 
-
+This timings will not work out-of-the running Peak Basic API since they use a different format.
+SocketCan timings:
 ``` bash
 ip link set can0 up type can \
   tq 12 prop-seg 25 phase-seg1 25 phase-seg2 29 sjw 10 \
   dtq 12 dprop-seg 6 dphase-seg1 2 dphase-seg2 7 dsjw 12 \
   restart-ms 1000 fd on
 ```
+
+
 
 
 First start Pcanview with 
