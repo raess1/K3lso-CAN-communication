@@ -184,6 +184,14 @@ Data: (hex) = 42 01 20
 Cycle Time: (ms) = 0
 [x] Paused 
 ```
+Under the - Message Type select the follwing: 
+``` bash
+[x] Extended Frame
+[x] CAN FD
+[x] Bit Rate Swtich
+```
+
+
 
 
 
