@@ -65,14 +65,6 @@ rmmod pcan
 sudo reboot
 ```
 
-SocketCan : Adapter such as the PEAK-CAN-FD use a 80MHz clock. The following timings have been observed to work:
-``` bash
-ip link set can0 up type can \
-  tq 12 prop-seg 25 phase-seg1 25 phase-seg2 29 sjw 10 \
-  dtq 12 dprop-seg 6 dphase-seg1 2 dphase-seg2 7 dsjw 12 \
-  restart-ms 1000 fd on
-```
-
 export some more properties of the device
 ``` bash
 for f in /sys/class/pcan/pcanpcifd1/*; do [ -f $f ] && echo -n "`basename $f` = " && cat $f; done 
@@ -83,21 +75,11 @@ lspcan overview of the PC CAN interfaces. The "-i" option displays static proper
 ./lspcan -T -t -i
 ```
 
-
-
-
-
-
-
-
-
 ## test Directory  (need make test and make install)
 
 ``` bash
  pcanfdtst –-help
 ```
-
-
 
 # TX TEST  (connecting to channels together. In this case CAN1 & CAN2)
 `(p36 .2 CAN Driver for Linux v8 User manual)`
