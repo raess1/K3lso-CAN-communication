@@ -165,6 +165,7 @@ First start Pcanview with
 pcanview 
 ```
 
+Select Pcan Channel (for example  -CAN2 /dev/pcan1) and configure it with the following settings:
 ``` bash
 Clock Frequency (Hz) = 80000000
 Bitrate (bps) Nominal = 1000000
