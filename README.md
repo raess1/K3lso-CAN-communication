@@ -150,12 +150,12 @@ data_sjw=12
 ```
 
 
-First start Pcanview with 
+First start Pcanview with (assuming you have it installed)
 ``` bash
 pcanview 
 ```
 
-Select Pcan Channel (for example  -CAN2 /dev/pcan1) and configure it with the following settings: (assuming you have it installed)
+Select Pcan Channel (for example  -CAN2 /dev/pcan1) and configure it with the following settings:
 ``` bash
 Clock Frequency (Hz) = 80000000
 Bitrate (bps) Nominal = 1000000
