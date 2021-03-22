@@ -158,8 +158,22 @@ pcanfdtst rx --fd-non-iso -b 1M -d 5M -c 80M /dev/pcanpcifd1
 
 
 
-# notes 
-1. A Channel that is initialized using CAN_InitializeFD must use CAN_ReadFD and CAN_WriteFD for communication. Calling CAN_Read and/or CAN_Write will result in a PCAN_ERROR_ILLOPERATION error. 
-2. As indicated by its name, the CAN_InitializeFD function initiates a FD capable PCAN Channel, preparing it for communicate within the CAN bus connected to it. Calls to the API functions will fail if they are used with a Channel handle, different than PCAN_NONEBUS, that has not been initialized yet. Each initialized channel should be released when it is not needed anymore. 
+
+## Pcanview timings and settings for communication with moteus r4.5 controller.
+First start Pcanview with 
+``` bash
+pcanview 
+```
+
+``` bash
+Clock Frequency (Hz) = 80000000
+Bitrate (bps) Nominal = 1000000
+Bitrate (bps) Data = 5000000
+Sample point (x100) Nominal = 6375
+Sample point (x100) Data = 5625
+Sync Jump Width Nominal = 10
+Sync Jump Width Data = 12
+```
+
 
 
