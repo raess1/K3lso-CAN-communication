@@ -207,6 +207,30 @@ In the Rx CAN-ID. you should now get a respons from moteus under data table with
 41 01 00
 ```
 
+### Next test. 
+Create two new Transmit Messages.
+
+first messange: Set postion to 0 and turn on torque.
+(Edit Transmit Message)
+``` bash
+ID: (hex) = 8001
+Len = 19
+Data: (hex) = 01 00 0a 0e 20 00 00 00 00 00 00 00 00 11 00 1f 01 13 0d
+Cycle Time: (ms) = 0
+[x] Paused 
+```
+Second messange: turn of torque
+``` bash
+ID: (hex) = 8001
+Len = 3
+Data: (hex) = 01 00 00
+Cycle Time: (ms) = 0
+[x] Paused 
+```
+Send first messange and you should here the motor has applied torque.
+Send second messange and you should here the motor has no more applied torque.
+
+
 
 
 
