@@ -167,6 +167,7 @@ Sync Jump Width Data = 12
 ```
 
 
+### Test 1
 To send a first test command to verify communication with moteus (Edit Transmit Message)
 ``` bash
 ID: (hex) = 8001
@@ -190,7 +191,7 @@ In the Rx CAN-ID. you should now get a respons from moteus under data table with
 41 01 00
 ```
 
-### Next test. 
+### Test 2
 Create two new Transmit Messages. (Edit Transmit Message)
 
 first messange: Set postion to 0 and turn on torque.
