@@ -236,14 +236,32 @@ SJW – abbreviation for Synchronization Jump Width – a quantity that determin
 
 
 
+
 ## improving performance (test section)
+To start we are hitting a loop Frequency at around = 650[hz] for one motor
+`
+fdusemsi = 0
+`
+Frequency = 2489.53[hz]
+`
+fdusemsi = 1
+
+`
+Frequency = 3087.44[hz]
+`
+fdusemsi = 2 
+`
+Frequency = 3090.87[hz]
+
+
 1. Run via shell (not over GUI)
-2. Adjust data size. (12bit vs 32bit).
-3. Priority settings.
-4. Adjust CPU performance test.
-5. OS/Kernel optimization.
-6. Driver nonblocking vs blocking
-7. Run on isolated thread.
+ Frequency = 3089.7[hz]
+3. Adjust data size. (12bit vs 32bit).
+4. Priority settings.
+5. Adjust CPU performance test.
+6. OS/Kernel optimization.
+7. Driver nonblocking vs blocking
+8. Run on isolated thread.
 
 
 
