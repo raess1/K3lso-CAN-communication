@@ -231,6 +231,8 @@ RX respons:
 
 
 
+Can notes:
+SJW – abbreviation for Synchronization Jump Width – a quantity that determines how much a CAN controller is allowed to adjust its on-chip clock to run in sync with other nodes on the bus. A typical value would be some 10-20% of a bit.
 
 
 
