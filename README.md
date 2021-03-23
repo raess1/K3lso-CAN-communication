@@ -236,7 +236,14 @@ SJW – abbreviation for Synchronization Jump Width – a quantity that determin
 
 
 
-
+## improving performance (test section)
+1. Run via shell (not over GUI)
+2. Adjust data size. (12bit vs 32bit).
+3. Priority settings.
+4. Adjust CPU performance test.
+5. OS/Kernel optimization.
+6. Driver nonblocking vs blocking
+7. Run on isolated thread.
 
 
 
