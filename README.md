@@ -239,6 +239,8 @@ SJW – abbreviation for Synchronization Jump Width – a quantity that determin
 
 ## improving performance (test section)
 To start we are hitting a loop Frequency at around = 650[hz] for one motor
+
+
 `
 fdusemsi = 0
 `
