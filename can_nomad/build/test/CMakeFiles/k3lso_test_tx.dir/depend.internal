@@ -4,4 +4,4 @@
 test/CMakeFiles/k3lso_test_tx.dir/k3lso_test_tx.cpp.o
  ../include/CAN/CANDevice.h
  ../include/CAN/PCANDevice.h
- /home/robot/camilos_dev/can_nomad/test/k3lso_test_tx.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/test/k3lso_test_tx.cpp

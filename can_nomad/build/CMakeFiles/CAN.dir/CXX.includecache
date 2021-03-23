@@ -60,7 +60,7 @@ string
 chrono
 -
 
-/home/robot/camilos_dev/can_nomad/src/CANDevice.cpp
+/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/CANDevice.cpp
 stdio.h
 -
 stdlib.h
@@ -74,7 +74,7 @@ iostream
 CAN/CANDevice.h
 -
 
-/home/robot/camilos_dev/can_nomad/src/PCANDevice.cpp
+/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/PCANDevice.cpp
 stdio.h
 -
 stdlib.h
@@ -90,7 +90,7 @@ libpcanfd.h
 CAN/PCANDevice.h
 -
 
-/home/robot/camilos_dev/can_nomad/src/RealTimeTask.cpp
+/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/RealTimeTask.cpp
 CAN/RealTimeTask.hpp
 -
 limits.h
@@ -122,7 +122,7 @@ sys/timerfd.h
 malloc.h
 -
 
-/home/robot/camilos_dev/can_nomad/src/SocketCANDevice.cpp
+/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/SocketCANDevice.cpp
 stdio.h
 -
 stdlib.h

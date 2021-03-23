@@ -124,7 +124,7 @@ bool PCANDevice::Send(CAN_msg_t &msg)
     pcan_msg.type = PCANFD_TYPE_CANFD_MSG;
     pcan_msg.id = msg.id;
     pcan_msg.data_len = msg.length;
-    pcan_msg.flags = PCANFD_MSG_STD | PCANFD_MSG_BRS;
+    pcan_msg.flags = PCANFD_MSG_STD | PCANFD_MSG_BRS | PCANFD_MSG_EXT;
 
     // Copy Message Data to PCANFD
     memcpy(pcan_msg.data, msg.data, msg.length);
@@ -148,6 +148,10 @@ bool PCANDevice::Receive(CAN_msg_t &msg)
     if (rx_error)
     {
         // TODO: Log Received Errors??
+        return false;
+    }
+    if(pcan_msg.type != PCANFD_TYPE_CANFD_MSG)
+    {
         return false;
     }
     

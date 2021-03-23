@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/camilos_dev/can_nomad
+CMAKE_SOURCE_DIR = /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/camilos_dev/can_nomad/build
+CMAKE_BINARY_DIR = /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/camilos_dev/can_nomad/build/CMakeFiles /home/robot/camilos_dev/can_nomad/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/camilos_dev/can_nomad/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,30 +124,17 @@ CAN/fast:
 .PHONY : CAN/fast
 
 #=============================================================================
-# Target rules for targets named k3lso_test_rx
+# Target rules for targets named pcan_test
 
 # Build rule for target.
-k3lso_test_rx: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 k3lso_test_rx
-.PHONY : k3lso_test_rx
+pcan_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcan_test
+.PHONY : pcan_test
 
 # fast build rule for target.
-k3lso_test_rx/fast:
-	$(MAKE) -f test/CMakeFiles/k3lso_test_rx.dir/build.make test/CMakeFiles/k3lso_test_rx.dir/build
-.PHONY : k3lso_test_rx/fast
-
-#=============================================================================
-# Target rules for targets named k3lso_test_tx
-
-# Build rule for target.
-k3lso_test_tx: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 k3lso_test_tx
-.PHONY : k3lso_test_tx
-
-# fast build rule for target.
-k3lso_test_tx/fast:
-	$(MAKE) -f test/CMakeFiles/k3lso_test_tx.dir/build.make test/CMakeFiles/k3lso_test_tx.dir/build
-.PHONY : k3lso_test_tx/fast
+pcan_test/fast:
+	$(MAKE) -f test/CMakeFiles/pcan_test.dir/build.make test/CMakeFiles/pcan_test.dir/build
+.PHONY : pcan_test/fast
 
 #=============================================================================
 # Target rules for targets named can_test
@@ -163,17 +150,56 @@ can_test/fast:
 .PHONY : can_test/fast
 
 #=============================================================================
-# Target rules for targets named pcan_test
+# Target rules for targets named k3lso_test_tx
 
 # Build rule for target.
-pcan_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcan_test
-.PHONY : pcan_test
+k3lso_test_tx: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k3lso_test_tx
+.PHONY : k3lso_test_tx
 
 # fast build rule for target.
-pcan_test/fast:
-	$(MAKE) -f test/CMakeFiles/pcan_test.dir/build.make test/CMakeFiles/pcan_test.dir/build
-.PHONY : pcan_test/fast
+k3lso_test_tx/fast:
+	$(MAKE) -f test/CMakeFiles/k3lso_test_tx.dir/build.make test/CMakeFiles/k3lso_test_tx.dir/build
+.PHONY : k3lso_test_tx/fast
+
+#=============================================================================
+# Target rules for targets named k3lso_freq
+
+# Build rule for target.
+k3lso_freq: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k3lso_freq
+.PHONY : k3lso_freq
+
+# fast build rule for target.
+k3lso_freq/fast:
+	$(MAKE) -f test/CMakeFiles/k3lso_freq.dir/build.make test/CMakeFiles/k3lso_freq.dir/build
+.PHONY : k3lso_freq/fast
+
+#=============================================================================
+# Target rules for targets named k3lso_test_rx
+
+# Build rule for target.
+k3lso_test_rx: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k3lso_test_rx
+.PHONY : k3lso_test_rx
+
+# fast build rule for target.
+k3lso_test_rx/fast:
+	$(MAKE) -f test/CMakeFiles/k3lso_test_rx.dir/build.make test/CMakeFiles/k3lso_test_rx.dir/build
+.PHONY : k3lso_test_rx/fast
+
+#=============================================================================
+# Target rules for targets named k3lso_torque
+
+# Build rule for target.
+k3lso_torque: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k3lso_torque
+.PHONY : k3lso_torque
+
+# fast build rule for target.
+k3lso_torque/fast:
+	$(MAKE) -f test/CMakeFiles/k3lso_torque.dir/build.make test/CMakeFiles/k3lso_torque.dir/build
+.PHONY : k3lso_torque/fast
 
 src/CANDevice.o: src/CANDevice.cpp.o
 
@@ -292,10 +318,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CAN"
 	@echo "... edit_cache"
-	@echo "... k3lso_test_rx"
-	@echo "... k3lso_test_tx"
-	@echo "... can_test"
 	@echo "... pcan_test"
+	@echo "... can_test"
+	@echo "... k3lso_test_tx"
+	@echo "... k3lso_freq"
+	@echo "... k3lso_test_rx"
+	@echo "... k3lso_torque"
 	@echo "... src/CANDevice.o"
 	@echo "... src/CANDevice.i"
 	@echo "... src/CANDevice.s"

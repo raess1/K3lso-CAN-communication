@@ -7,4 +7,4 @@ test/CMakeFiles/can_test.dir/can_test.cpp.o
  ../include/CAN/Registers.h
  ../include/CAN/SocketCANDevice.h
  ../include/CAN/Statistics.hpp
- /home/robot/camilos_dev/can_nomad/test/can_test.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/test/can_test.cpp

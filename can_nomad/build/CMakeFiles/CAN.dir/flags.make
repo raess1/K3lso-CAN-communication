@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/robot/camilos_dev/can_nomad/include 
+CXX_INCLUDES = -I/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/include 
 

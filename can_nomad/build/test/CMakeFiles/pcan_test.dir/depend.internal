@@ -7,4 +7,4 @@ test/CMakeFiles/pcan_test.dir/pcan_test.cpp.o
  ../include/CAN/RealTimeTask.hpp
  ../include/CAN/Registers.h
  ../include/CAN/Statistics.hpp
- /home/robot/camilos_dev/can_nomad/test/pcan_test.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/test/pcan_test.cpp

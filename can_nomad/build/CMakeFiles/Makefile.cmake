@@ -45,8 +45,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/CAN.dir/DependInfo.cmake"
-  "test/CMakeFiles/k3lso_test_rx.dir/DependInfo.cmake"
-  "test/CMakeFiles/k3lso_test_tx.dir/DependInfo.cmake"
-  "test/CMakeFiles/can_test.dir/DependInfo.cmake"
   "test/CMakeFiles/pcan_test.dir/DependInfo.cmake"
+  "test/CMakeFiles/can_test.dir/DependInfo.cmake"
+  "test/CMakeFiles/k3lso_test_tx.dir/DependInfo.cmake"
+  "test/CMakeFiles/k3lso_freq.dir/DependInfo.cmake"
+  "test/CMakeFiles/k3lso_test_rx.dir/DependInfo.cmake"
+  "test/CMakeFiles/k3lso_torque.dir/DependInfo.cmake"
   )

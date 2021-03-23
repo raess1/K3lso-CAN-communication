@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robot/camilos_dev/can_nomad/src/CANDevice.cpp" "/home/robot/camilos_dev/can_nomad/build/CMakeFiles/CAN.dir/src/CANDevice.cpp.o"
-  "/home/robot/camilos_dev/can_nomad/src/PCANDevice.cpp" "/home/robot/camilos_dev/can_nomad/build/CMakeFiles/CAN.dir/src/PCANDevice.cpp.o"
-  "/home/robot/camilos_dev/can_nomad/src/RealTimeTask.cpp" "/home/robot/camilos_dev/can_nomad/build/CMakeFiles/CAN.dir/src/RealTimeTask.cpp.o"
-  "/home/robot/camilos_dev/can_nomad/src/SocketCANDevice.cpp" "/home/robot/camilos_dev/can_nomad/build/CMakeFiles/CAN.dir/src/SocketCANDevice.cpp.o"
+  "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/CANDevice.cpp" "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles/CAN.dir/src/CANDevice.cpp.o"
+  "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/PCANDevice.cpp" "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles/CAN.dir/src/PCANDevice.cpp.o"
+  "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/RealTimeTask.cpp" "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles/CAN.dir/src/RealTimeTask.cpp.o"
+  "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/SocketCANDevice.cpp" "/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/build/CMakeFiles/CAN.dir/src/SocketCANDevice.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

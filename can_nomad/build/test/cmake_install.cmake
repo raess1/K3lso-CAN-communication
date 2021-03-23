@@ -1,4 +1,4 @@
-# Install script for directory: /home/robot/camilos_dev/can_nomad/test
+# Install script for directory: /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

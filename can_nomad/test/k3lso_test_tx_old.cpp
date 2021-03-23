@@ -36,7 +36,6 @@ int main(int argc, char** argv){
     while (i++ < 10)
     {
         if(can.Receive(msg)){
-            msg.data[msg.length+1] = '\0';
             std::cout << std::endl << "Received" << std::endl;
             std::cout << "id: " << msg.id << std::endl;
             std::cout << "length: " << msg.length << std::endl;

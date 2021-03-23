@@ -3,16 +3,16 @@
 
 CMakeFiles/CAN.dir/src/CANDevice.cpp.o
  ../include/CAN/CANDevice.h
- /home/robot/camilos_dev/can_nomad/src/CANDevice.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/CANDevice.cpp
 CMakeFiles/CAN.dir/src/PCANDevice.cpp.o
  ../include/CAN/CANDevice.h
  ../include/CAN/PCANDevice.h
- /home/robot/camilos_dev/can_nomad/src/PCANDevice.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/PCANDevice.cpp
 CMakeFiles/CAN.dir/src/RealTimeTask.cpp.o
  ../include/CAN/RealTimeTask.hpp
  ../include/CAN/Statistics.hpp
- /home/robot/camilos_dev/can_nomad/src/RealTimeTask.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/RealTimeTask.cpp
 CMakeFiles/CAN.dir/src/SocketCANDevice.cpp.o
  ../include/CAN/CANDevice.h
  ../include/CAN/SocketCANDevice.h
- /home/robot/camilos_dev/can_nomad/src/SocketCANDevice.cpp
+ /home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/src/SocketCANDevice.cpp

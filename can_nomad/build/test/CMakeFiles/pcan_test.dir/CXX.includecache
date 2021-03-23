@@ -54,7 +54,7 @@ string
 chrono
 -
 
-/home/robot/camilos_dev/can_nomad/test/pcan_test.cpp
+/home/robot/camilos_dev/K3lso-CAN-communication/can_nomad/test/pcan_test.cpp
 CAN/PCANDevice.h
 -
 CAN/Registers.h
