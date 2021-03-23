@@ -243,11 +243,12 @@ To start we are hitting a loop Frequency at around = 650[hz] for one motor
 fdusemsi = 0
 `
 Frequency = 2489.53[hz]
-`
-fdusemsi = 1
 
 `
+fdusemsi = 1
+`
 Frequency = 3087.44[hz]
+
 `
 fdusemsi = 2 
 `
