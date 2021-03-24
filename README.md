@@ -264,6 +264,19 @@ $ sudo rmmod pcan
 $ sudo modprobe pcan
 ```
 
+With this new conf we are hitting around `2489.53[hz]`
+
+Definition
+- fdirqcl defines the limit of pending frames above which the HW generates a hw interrupt, while
+- fdirqtl defines the time limit above which the HW generates a hw interrupt.
+
+According to the manual (PAGE 11) https://www.peak-system.com/fileadmin/media/linux/files/PCAN-Driver-Linux_UserMan_eng.pdf
+
+We can enable the driver the usage of MSI for the PCIe-based CAN FD cards.
+![1](https://user-images.githubusercontent.com/6362413/112323778-6286c980-8cb2-11eb-9158-9b50120e15aa.PNG)
+
+
+
 
 
 
