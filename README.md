@@ -238,7 +238,34 @@ SJW – abbreviation for Synchronization Jump Width – a quantity that determin
 
 
 ## improving performance (test section)
-To start we are hitting a loop Frequency at around = 650[hz] for one motor
+To start we are hitting a loop Frequency at around = 650[hz] for one motor out of the box with the PCAN-M.2 Four Channel. Yes. this is not a great speed!
+So lets improve it!
+
+
+The pcan driver behavior can be configured to answer a bit quicker to the PCIe FD hw interrupts.
+Open the pcan.conf with sudo.
+``` bash
+sudo gedit /etc/modprobe.d/pcan.conf
+```
+Lowering these values should increase the responsiveness of the driver.
+```
+# pcan - automatic made entry, begin --------
+# if required add options and remove comment
+# options pcan type=isa,sp
+options pcan fdirqtl=1
+options pcan fdirqcl=1
+install pcan modprobe --ignore-install pcan
+# pcan - automatic made entry, end ----------
+```
+Save the file and run the follwing. (which unloads and then reloads the drive) 
+
+``` bash
+$ sudo rmmod pcan
+$ sudo modprobe pcan
+```
+
+
+
 
 
 `
