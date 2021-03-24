@@ -299,7 +299,7 @@ $ sudo rmmod pcan
 $ sudo modprobe pcan
 ```
 
-With this new config we are hitting around `3090.87[hz]` You can of cource play around with this settings to see what you get. for example `options pcan fdusemsi=2`
+With this new config we are hitting around `3090.87[hz]` You can play around with this settings to see what you get. for example `options pcan fdusemsi=2`
  
 
 
