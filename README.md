@@ -275,26 +275,32 @@ According to the manual (PAGE 11) https://www.peak-system.com/fileadmin/media/li
 We can enable the driver the usage of MSI for the PCIe-based CAN FD cards.
 ![1](https://user-images.githubusercontent.com/6362413/112323778-6286c980-8cb2-11eb-9158-9b50120e15aa.PNG)
 
+Lets try it! 
 
+``` bash
+sudo gedit /etc/modprobe.d/pcan.conf
+```
 
+add `options pcan fdusemsi=1`
+```
+# pcan - automatic made entry, begin --------
+# if required add options and remove comment
+# options pcan type=isa,sp
+options pcan fdirqtl=1
+options pcan fdirqcl=1
+options pcan fdusemsi=1
+install pcan modprobe --ignore-install pcan
+# pcan - automatic made entry, end ----------
+```
+Save the file and run the follwing. (which unloads and then reloads the drive) 
 
+``` bash
+$ sudo rmmod pcan
+$ sudo modprobe pcan
+```
 
-
-
-`
-fdusemsi = 0
-`
-Frequency = 2489.53[hz]
-
-`
-fdusemsi = 1
-`
-Frequency = 3087.44[hz]
-
-`
-fdusemsi = 2 
-`
-Frequency = 3090.87[hz]
+With this new config we are hitting around `3090.87[hz]` You can of cource play around with this settings to see what you get. for example `options pcan fdusemsi=2`
+ 
 
 
 1. Run via shell (not over GUI)
