@@ -313,5 +313,16 @@ With this new config we are hitting around `3090.87[hz]` You can play around wit
 8. Run on isolated thread.
 
 
+## cpuset Lets try some basic cpu isolation.
+
+``` bash
+cset shield --cpu 4-7
+```
+
+``` bash
+cset shield --exec mycommand -- -arg1 -arg2
+```
+more to come.
+realse shield.
 
 
