@@ -326,3 +326,7 @@ more to come.
 realse shield.
 
 
+Notes for myself:
+for ID in $(seq 1 12); do echo "d pos nan 0 5" | moteus_tool -t $ID -c; done
+
+
