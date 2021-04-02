@@ -9,8 +9,6 @@
 #define DEVICE "/dev/pcanpcifd"
 
 PCANDevice can;
-// char test_string[64] = "Hello Robin";
-std::string valid_channels = "1234";
 
 int main(int argc, char** argv){
     int can_channel;
@@ -20,10 +18,10 @@ int main(int argc, char** argv){
     std::string command_str;
     int command_str_len;
 
-    std::cout << "Select CAN Channel (1, 2, 3 or 4)" << std::endl << ">> ";
+    std::cout << "Select CAN Channel (1-12)" << std::endl << ">> ";
     std::cout.flush();
     std::cin >> can_channel;
-    if(can_channel<1 || can_channel>4){
+    if(can_channel<1 || can_channel>12){
         std::cerr << "Not valid channel" << std::endl;
         return 1;
     }
