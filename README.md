@@ -329,4 +329,16 @@ realse shield.
 Notes for myself:
 for ID in $(seq 1 12); do echo "d pos nan 0 5" | moteus_tool -t $ID -c; done
 
+##  Set a device-number for specific channel 
+
+Check current device number (replace [pcanpcifd0] with results from ls -l /dev/pcan*)
+``` bash
+pcan-settings -f=/dev/pcanpcifd0 –d
+```
+
+Apply a device id to a channel (in this example id:10)
+``` bash
+pcan-settings -f=/dev/pcanpcifd0 –d 10
+```
+
 
