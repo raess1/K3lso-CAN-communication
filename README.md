@@ -1,5 +1,8 @@
 # K3lso-CAN-communication
 
+![Blueprint](https://user-images.githubusercontent.com/6362413/114827198-ac9e2f00-9dc8-11eb-9a55-0b9ee85d9e90.png)
+
+
 PCAN-M.2 CAN and CAN FD Interface for M.2 (PCIe)  https://www.peak-system.com/PCAN-M-2.473.0.html?&L=1
 
 PCAN-miniPCIe FD https://www.peak-system.com/PCAN-miniPCIe-FD.464.0.html?&L=1
