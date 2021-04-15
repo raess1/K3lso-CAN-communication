@@ -344,4 +344,7 @@ Apply a device id to a channel (in this example id:10)
 pcan-settings -f=/dev/pcanpcifd0 –d 10
 ```
 
+Confirm and assign ID:s to each channel. Then we can use `#define DEVICE "/dev/pcan-pcie_fd/devid=X` to call the joint
+
+
 
