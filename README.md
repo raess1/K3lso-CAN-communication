@@ -370,7 +370,7 @@ data_sjw = 12
 Open terminal and type execute. Where [devices=x] is the motor ID and [PCAN_PCIBUS2] is your can bus. So please note that the ID most exist on the correct BUS.
 (https://github.com/mjbots/moteus/blob/main/docs/reference.md)
 
-`python3.7 -m moteus_gui.tview --devices=x --can-iface pcan --can-chan PCAN_PCIBUS2`
+`python3.7 -m moteus_gui.tview --devices=x --can-iface pcan --can-chan PCAN_PCIBUSX`
 
 where --can-iface specifies the "interface" for python-can and --can-chan specifies the "channel".
 
