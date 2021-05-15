@@ -366,6 +366,7 @@ data_tseg2 = 7
 data_sjw = 12
 ```
 Open terminal and type execute. Where [devices=x] is the motor ID and [PCAN_PCIBUS2] is your can bus. So please note that the ID most exist on the correct BUS.
+
 `python3.7 -m moteus_gui.tview --devices=x --can-iface pcan --can-chan PCAN_PCIBUS2`
 
 
