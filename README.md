@@ -45,9 +45,9 @@ Install PCAN-M.2 Driver for Linux (Ubuntu 18.04)
 Driver installation:
 ``` bash
 cd && mkdir -p ~/src/peak && cd ~/src/peak
-wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.11.0.tar.gz
-tar -xzf peak-linux-driver-8.11.0.tar.gz # Untar the compressed tarball file
-cd peak-linux-driver-8.11.0/ 
+wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.12.0.tar.gz
+tar -xzf peak-linux-driver-8.12.0.tar.gz # Untar the compressed tarball file
+cd peak-linux-driver-8.12.0/ 
 make -C driver PCI=PCI_SUPPORT PCIEC=PCIEC_SUPPORT DNG=NO_DONGLE_SUPPORT USB=NO_USB_SUPPORT ISA=NO_ISA_SUPPORT PCC=NO_PCCARD_SUPPORT
 sudo make -C driver install
 make -C lib && sudo make -C lib install
@@ -62,7 +62,7 @@ pcanview
 
 uninstall PCAN-M.2 Driver for Linux (Ubuntu 18.04)
 ``` bash
-cd ~/src/peak/peak-linux-driver-8.10.2/ 
+cd ~/src/peak/peak-linux-driver-8.12.0/ 
 sudo make uninstall
 rmmod pcan
 sudo reboot
