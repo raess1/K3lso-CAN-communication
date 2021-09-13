@@ -42,6 +42,8 @@ sudo apt-get install libpopt-dev
 ```
 
 
+
+
 Install PCAN-M.2 Driver for Linux (Ubuntu 18.04)
 Driver installation:
 ``` bash
@@ -55,6 +57,16 @@ make -C lib && sudo make -C lib install
 make -C test && sudo make -C test install # test utilities (optional)
 sudo modprobe pcan # driver loading
 ```
+
+install PCAN-Basic
+Download: https://www.peak-system.com/quick/BasicLinux
+``` bash
+cd PCAN-Basic_Linux-4.3.4/libpcanbasic/pcanbasic
+make clean
+make
+sudo make install
+```
+
 
 Launch PCAN-View for testing CAN communication:
 ``` bash
