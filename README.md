@@ -386,12 +386,12 @@ Open terminal and type execute. Where [devices=x] is the motor ID and [PCAN_PCIB
 `python3.7 -m moteus_gui.tview --devices=x --can-iface pcan --can-chan PCAN_PCIBUSX`
 where --can-iface specifies the "interface" for python-can and --can-chan specifies the "channel".
 
-**For exammple connect to a motor with ID 6 and PCAN_PCIBUS4**
+**For exammple connect to a motor with ID 6 and PCAN_PCIBUS4**  
 `python3.7 -m moteus_gui.tview --devices=6 --can-iface pcan --can-chan PCAN_PCIBUS4`  
   
   Ones Tview is running you can plot, change settings, test diffrent commands etc.
 
-**For exammple connect to the PD board with ID 32 and PCAN_PCIBUS3**
+**For exammple connect to the PD board with ID 32 and PCAN_PCIBUS3**  
 `python3.7 -m moteus_gui.tview --devices=32 --can-iface pcan --can-chan PCAN_PCIBUS3` 
 
 
