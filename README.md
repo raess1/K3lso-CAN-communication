@@ -394,6 +394,9 @@ where --can-iface specifies the "interface" for python-can and --can-chan specif
 **For exammple connect to the PD board with ID 32 and PCAN_PCIBUS3**  
 `python3.7 -m moteus_gui.tview --devices=32 --can-iface pcan --can-chan PCAN_PCIBUS3` 
 
+![fff](https://user-images.githubusercontent.com/6362413/150012761-1557dcb8-3939-4c13-a984-7eec50ec37c8.jpg)
+
+
 
 
 
